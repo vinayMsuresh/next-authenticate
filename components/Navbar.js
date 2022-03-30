@@ -5,12 +5,13 @@ export default function Navbar() {
     const { data: session, status } = useSession();
     console.log(session);
     // console.log(status,session)
+    // ${!session && status === 'loading' ? 'loading' : 'loaded'}
     return (
         <nav className='header'>
           <h1 className='logo'>
             <a href='#'>NextAuth</a>
           </h1>
-          <ul className={`main-nav ${!session && status === 'loading' ? 'loading' : 'loaded'}`}>
+          <ul className={`main-nav `}>
             <li>
               <Link href='/'>
                 <a>Home</a>
