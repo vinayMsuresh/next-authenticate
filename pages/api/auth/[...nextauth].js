@@ -23,7 +23,6 @@ export default NextAuth({
             return session
         }
     },
-    adapter:MongoDBAdapter(clientPromise),
     session:{
         jwt:true
     },
